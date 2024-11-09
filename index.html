@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carregamento Escolar</title>
+  <style>
+    /* Estilos gerais */
+    body, html {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f4f6;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container da tela de carregamento */
+    .loading-container {
+      text-align: center;
+    }
+
+    /* Lápis */
+    .pencil {
+      display: inline-block;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background-color: #ffcc00;
+      border-radius: 4px 4px 0 0;
+      margin-bottom: -10px;
+      animation: move 2s ease-in-out infinite;
+    }
+    .pencil::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 4px;
+      width: 12px;
+      height: 10px;
+      background-color: #555;
+      border-radius: 2px;
+    }
+
+    /* Linha de carregamento (efeito de escrita) */
+    .loading-line {
+      width: 300px;
+      height: 4px;
+      background-color: #ddd;
+      overflow: hidden;
+      position: relative;
+      margin-top: 20px;
+    }
+    .loading-line::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0;
+      background-color: #007acc;
+      animation: loading 2s ease-in-out infinite;
+    }
+
+    /* Texto de loading */
+    .loading-text {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* Animação da linha de carregamento */
+    @keyframes loading {
+      0% { width: 0; }
+      50% { width: 100%; }
+      100% { width: 0; }
+    }
+
+    /* Animação de movimento do lápis */
+    @keyframes move {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(280px); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <!-- Lápis -->
+    <div class="pencil"></div>
+    <!-- Linha de carregamento -->
+    <div class="loading-line"></div>
+    <!-- Texto de loading -->
+    <div class="loading-text">Carregando...</div>
+  </div>
+  
+  <script>
+    
+    setTimeout(()=> {
+      
+      
+      window.location.href = "jogos.html"
+      
+    },3000)
+    
+    
+  </script>
+</body>
+</html>
