@@ -178,3 +178,33 @@ button:hover {
     background-color: #356ac3;
     transform: scale(1.05);
 }
+
+/* Estilo do ícone de informação flutuante */
+.info-icon {
+    position: fixed;         /* Fica fixo na tela */
+    bottom: 20px;            /* Distância da parte inferior da página */
+    right: 20px;             /* Distância do lado direito da página */
+    width: 40px;             /* Largura do ícone */
+    height: 40px;            /* Altura do ícone */
+    background-color: #4285f4; /* Cor azul */
+    color: white;            /* Cor do texto */
+    font-size: 24px;         /* Tamanho da fonte */
+    font-weight: bold;       /* Negrito */
+    border-radius: 50%;      /* Deixa o ícone redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    cursor: pointer;         /* Mostra um ponteiro ao passar o mouse */
+    transition: transform 0.2s ease; /* Animação de clique */
+}
+
+/* Efeito de clique no ícone */
+.info-icon:active {
+    transform: scale(0.9); /* Encolhe um pouco ao clicar */
+}
+
+/* Efeito de hover no ícone */
+.info-icon:hover {
+    background-color: #356ac3; /* Cor azul mais escura ao passar o mouse */
+}
